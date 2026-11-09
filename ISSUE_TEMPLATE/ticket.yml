@@ -1,0 +1,38 @@
+name: Ticket
+description: A dev or IT ticket for the ATDEV Tickets board
+title: "PREFIX-000 · Short title"
+projects: ["atdevdo/4"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the ticket prefix in the title (WEB-, SF-, FLEX-, N8N-, IT-). After creating it, set Priority, Target date (the due date) and Product.
+        Questions go in the comments of this ticket.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to change and why, in 2–4 lines.
+    validations:
+      required: true
+  - type: input
+    id: spec
+    attributes:
+      label: Spec link
+      description: Google Drive ticket doc, prototype or Airtable task, if there is one.
+      placeholder: https://docs.google.com/document/d/...
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: One checkbox per item. The ticket is done when every box is checked.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: questions
+    attributes:
+      label: Open questions
+      description: Decisions still needed from Andre before or during the build.
