@@ -22,7 +22,6 @@ body:
       label: Where it happens
       options:
         - Salesforce (Production)
-        - Salesforce (Sandbox)
         - FlexApply
         - ATDEV Website
         - n8n
