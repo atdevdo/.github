@@ -1,0 +1,79 @@
+name: Bug
+description: Something in an ATDEV app is broken or behaving wrong
+title: "PREFIX-000 · Short description of the bug"
+type: Bug
+projects: ["atdevdo/4"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the ticket prefix in the title (WEB-, SF-, FLEX-, N8N-, IT-). After creating it, set Priority, Target date and Product.
+        One bug per ticket. New behavior or features go in a regular Ticket.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken and why it matters, in 2–4 lines.
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where it happens
+      options:
+        - Salesforce (Production)
+        - Salesforce (Sandbox)
+        - FlexApply
+        - ATDEV Website
+        - n8n
+        - Airtable
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or record links
+      description: Drag images here, or paste Salesforce record URLs.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: One checkbox per item. The bug is fixed when every box is checked.
+      value: |
+        - [ ] Bug no longer happens following the steps above
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Out of scope
+      description: Related work that belongs in a separate ticket.
+  - type: textarea
+    id: questions
+    attributes:
+      label: Open questions
+      description: Decisions still needed from Andre before or during the fix.
